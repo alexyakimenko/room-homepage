@@ -1,12 +1,14 @@
-import React from "react"
+import React, {useState} from "react"
 import {GlobalStyle} from "./GlobalStyles"
+import Navbar from "./components/Navbar";
 
 function App() {
+  const [isNavOpen, setIsNavOpen] = useState(false)
 
   return (
     <div className="App">
       <GlobalStyle />
-      <h1>Hello</h1>
+      <Navbar isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
     </div>
   );
 }
