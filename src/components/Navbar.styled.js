@@ -8,16 +8,28 @@ export const Overlay = styled.div`
     right: 0;
     background-color: rgba(0,0,0,0.7);
     transition: bottom 300ms ease-in-out;
+    
+    @media (min-width: 768px) {
+        bottom: 100%;
+    }
 `
 
 export const Container = styled.div`
     padding: 48px 23px;
+
+    @media (min-width: 768px) {
+        padding: 64px;
+    }
 `
 
 export const Wrapper = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 768px) {
+        justify-content: flex-start;
+    }
 `
 
 export const Burger = styled.div`
@@ -31,7 +43,7 @@ export const Burger = styled.div`
     justify-content: space-between;
     cursor: pointer;
     transform: rotate(${({isOpen}) => (isOpen ? 180 : 0)}deg);
-    transition: transform 300ms cubic-bezier(.94,-0.73,.05,1.65);
+    transition: transform 500ms cubic-bezier(.94,-0.73,.05,1.65);
     z-index: 2;
 
     span {
@@ -44,8 +56,12 @@ export const Burger = styled.div`
         &:nth-child(3) {
             transform: ${({isOpen}) => (isOpen ? "translateY(-300%) rotate(-45deg)" : "translateY(0) rotate(0)")};
         }
-        transition: all 300ms ease-in-out;
+        transition: all 500ms ease-in-out;
         background-color: ${({isOpen}) => (isOpen ? "var(--darkGray)" : "var(--white)")};
+    }
+
+    @media (min-width: 768px) {
+        display: none;
     }
 `
 
@@ -71,6 +87,15 @@ export const Nav = styled.nav`
     background-color: var(--white);
     transition: top 500ms ease-in-out, opacity 400ms ease-in-out;
     transition-delay: 100ms;
+
+    @media (min-width: 768px) {
+        top: 0;
+        opacity: 1;
+        left: 90px;
+        justify-content: flex-start;
+        background-color: transparent;
+        padding: 64px;
+    }
 `
 
 export const List = styled.ul`
@@ -93,7 +118,7 @@ export const Item = styled.li`
         content: "";
         display: inline-block;
         position: absolute;
-        background: var(--darkGray);
+        background: var(--black);
         bottom: -5px;
         left: 50%;
         transform: translateX(-50%) scaleX(0);
@@ -101,10 +126,18 @@ export const Item = styled.li`
         height: 0.125rem;
 
         transition: transform 500ms cubic-bezier(1,-1,0,0)
-    }
+    }        
     
     &:hover::after {
         transform: translateX(-50%) scaleX(1);
+    }
+
+    @media (min-width: 768px) {
+        opacity: 1;
+        transform: none;
+        &::after {
+            background: var(--white);
+        }
     }
 `
 
@@ -112,4 +145,8 @@ export const Link = styled.a`
     color: var(--black);
     text-decoration: none;
     font-size: 1rem;
+
+    @media (min-width: 768px) {
+        color: var(--white);
+    }
 `
