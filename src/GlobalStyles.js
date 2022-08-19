@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
         font-size: 100%;
         box-sizing: border-box;
+        height: 100%;
     }
 
     *, *::before, *::after {
@@ -22,5 +23,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-size: 0.75rem;
         font-family: "League Spartan", sans-serif;
+        overflow: ${({isNavOpen}) => (isNavOpen ? "hidden" : "scroll")};
     }
 `

@@ -1,17 +1,25 @@
 import styled from "styled-components"
 
+
+export const NavbarWrapper = styled.div`
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+`
+
 export const Overlay = styled.div`
     position: absolute;
-    top: 0;
-    bottom: ${({isOpen}) => (isOpen ? 0 : 100)}%;
+    top: ${({isOpen}) => (isOpen ? 0 : -100)}vh;
+    height: 100vh;
     left: 0;
     right: 0;
     background-color: rgba(0,0,0,0.7);
-    transition: bottom 300ms ease-in-out;
+    transition: all 500ms ease-in-out;
     
     @media (min-width: 768px) {
-        bottom: 100%;
+        top: -100vh;
     }
+    z-index: 1;
 `
 
 export const Container = styled.div`
@@ -95,13 +103,14 @@ export const Nav = styled.nav`
         justify-content: flex-start;
         background-color: transparent;
         padding: 64px;
+        width: auto;
     }
 `
 
 export const List = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 0;
+    margin: 0;
     padding: 0;
 `
 
@@ -125,7 +134,7 @@ export const Item = styled.li`
         width: 1rem;
         height: 0.125rem;
 
-        transition: transform 500ms cubic-bezier(1,-1,0,0)
+        transition: transform 300ms cubic-bezier(1,-1,0,0);
     }        
     
     &:hover::after {
