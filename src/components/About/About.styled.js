@@ -31,6 +31,10 @@ export const TextContent = styled.div`
     justify-content: center;
     padding: 50px 30px;
 
+    @media (min-width: 768px) {
+        padding: 50px 10%;
+    }
+
     * {
         margin: 0;
     }
