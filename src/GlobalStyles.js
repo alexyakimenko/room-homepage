@@ -23,10 +23,10 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-size: 0.75rem;
         font-family: "League Spartan", sans-serif;
-        overflow: ${({isNavOpen}) => (isNavOpen ? "hidden" : "scroll")};
+        overflow-y: ${({isNavOpen}) => (isNavOpen ? "hidden" : "scroll")};
 
         @media (min-width: 768px) {
-            overflow: hidden;
+            overflow-y: hidden;
         }
     }
 `
