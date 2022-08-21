@@ -1,6 +1,6 @@
 # Room homepage
 
-![](./screenshots/desktop.png)
+![](./screenshots/desktop.jpg)
 
 ### Built with
 
