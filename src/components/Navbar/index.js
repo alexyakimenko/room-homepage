@@ -17,36 +17,38 @@ const Navbar = ({isOpen, setIsOpen}) => {
   }
 
   return (
-    <NavbarWrapper isOpen={isOpen}>
-      <Overlay isOpen={isOpen}>
-      </Overlay>
-      <Nav isOpen={isOpen}>
-        <List>
-          <Item isOpen={isOpen} delay={getDelay}>
-            <Link href="#">home</Link>
-          </Item>
-          <Item isOpen={isOpen} delay={getDelay}>
-            <Link href="#">shop</Link>
-          </Item>
-          <Item isOpen={isOpen} delay={getDelay}>
-            <Link href="#">about</Link>
-          </Item>
-          <Item isOpen={isOpen} delay={getDelay}>
-            <Link href="#">contact</Link>
-          </Item>
-        </List> 
-      </Nav>
-      <Container isOpen={isOpen}>
-        <Wrapper>
-          <Burger isOpen={isOpen} onClick={handleClick}>
-              <Line />
-              <Line />
-              <Line />
-          </Burger>
-          <Logo src={LogoImage} alt="Room" />
-        </Wrapper>
-      </Container>
-    </NavbarWrapper>
+    <section>
+      <NavbarWrapper isOpen={isOpen}>
+        <Overlay isOpen={isOpen}>
+        </Overlay>
+        <Nav isOpen={isOpen}>
+          <List>
+            <Item isOpen={isOpen} delay={getDelay}>
+              <Link href="#">home</Link>
+            </Item>
+            <Item isOpen={isOpen} delay={getDelay}>
+              <Link href="#">shop</Link>
+            </Item>
+            <Item isOpen={isOpen} delay={getDelay}>
+              <Link href="#">about</Link>
+            </Item>
+            <Item isOpen={isOpen} delay={getDelay}>
+              <Link href="#">contact</Link>
+            </Item>
+          </List> 
+        </Nav>
+        <Container isOpen={isOpen}>
+          <Wrapper>
+            <Burger isOpen={isOpen} onClick={handleClick}>
+                <Line />
+                <Line />
+                <Line />
+            </Burger>
+            <Logo src={LogoImage} alt="Room" />
+          </Wrapper>
+        </Container>
+      </NavbarWrapper>
+    </section>
   )
 }
 

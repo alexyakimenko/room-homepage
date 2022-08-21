@@ -18,6 +18,10 @@ export const CarouselImg = styled.div`
     @media (min-width: 768px) {
         height: 540px;
     }
+
+    @media (min-height: 806px) {
+        height: var(--imageSize);
+    }
 `
 
 export const ImagesWrapper = styled.div`

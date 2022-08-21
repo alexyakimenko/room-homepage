@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         --black: hsl(0, 0%, 0%);
         --white: hsl(0, 0%, 100%);
         --veryDarkGray: hsl(0, 0%, 27%);
+        --imageSize: 66.75vh;
     }
 
     html {
@@ -26,7 +27,11 @@ export const GlobalStyle = createGlobalStyle`
         overflow-y: ${({isNavOpen}) => (isNavOpen ? "hidden" : "scroll")};
 
         @media (min-width: 768px) {
-            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        @media (min-height: 806px) and (min-width: 768px) {
+            overflow: hidden;
         }
     }
 `
