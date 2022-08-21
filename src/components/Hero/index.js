@@ -1,6 +1,6 @@
 import React from 'react'
 import Background from "../../images/desktop-image-hero-1.jpg"
-import { Carousel, CarouselImg, ImagesWrapper, Images, Image, Controls, Arrow, RightArrow, LeftArrow, CarouselContent, ContentWrapper, Item, Title, Paragraph, Cta, CtaArrow } from './Hero.styled'
+import { Carousel, CarouselImg, ImagesWrapper, Images, Image, Controls, Arrow, RightArrow, LeftArrow, CarouselContent, ContentWrapper, Item, ItemWrapper, Title, Paragraph, Cta, CtaArrow } from './Hero.styled'
 import data from "./data"
 import ArrowImage from "../../images/icon-arrow.svg"
 
@@ -51,14 +51,18 @@ const Hero = () => {
                 <ContentWrapper currentItem={currentItem}>
                     {
                         data.map((item, index) => {
-                            return <Item key={index}>
-                                <Title>{item.title}</Title>
-                                <Paragraph>{item.content}</Paragraph>
-                                <Cta>
-                                    Shop now
-                                    <CtaArrow src={ArrowImage} alt=""/>
-                                </Cta>
-                            </Item>
+                            return (
+                                <Item key={index}>
+                                    <ItemWrapper>
+                                    <Title>{item.title}</Title>
+                                    <Paragraph>{item.content}</Paragraph>
+                                    <Cta>
+                                        Shop now
+                                        <CtaArrow src={ArrowImage} alt=""/>
+                                    </Cta>
+                                    </ItemWrapper>
+                                </Item>
+                            )
                         })
                     }
                 </ContentWrapper>

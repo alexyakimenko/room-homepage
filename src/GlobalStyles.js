@@ -24,5 +24,9 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 0.75rem;
         font-family: "League Spartan", sans-serif;
         overflow: ${({isNavOpen}) => (isNavOpen ? "hidden" : "scroll")};
+
+        @media (min-width: 768px) {
+            overflow: hidden;
+        }
     }
 `

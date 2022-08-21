@@ -83,6 +83,11 @@ export const CarouselContent = styled.div`
     padding-top: 60px;
     padding-bottom: 70px;
     overflow: hidden;
+
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
 `
 
 export const ContentWrapper = styled.div`
@@ -98,12 +103,28 @@ export const Item = styled.div`
     min-width: 100%;
 `
 
+export const ItemWrapper = styled.div`
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: calc(100vw / 3);
+    }
+
+    @media (min-width: 992px) {
+        padding-left: 5%;
+    }
+`
+
 
 export const Title = styled.h1`
     font-size: 2.25rem;
     line-height: 1;
     color: var(--black);
     margin: 0;
+
+    @media (min-width: 768px) {
+        max-width: 410px;
+    }
 `
 
 export const Paragraph = styled.p`
@@ -111,6 +132,11 @@ export const Paragraph = styled.p`
     color: var(--darkGray);
     margin-top: 20px;
     margin-bottom: 0;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        max-width: 410px;
+    }
 `
 
 export const Cta = styled.a`
