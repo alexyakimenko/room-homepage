@@ -20,7 +20,7 @@ export const Image = styled.div`
     background-position: center;
     background-size: cover;
 
-    @media (min-height: 806px) {
+    @media (min-height: 806px) and (min-width: 768px) {
         height: calc(100vh - var(--imageSize));
     }
 `
