@@ -11,3 +11,5 @@
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JavaScript UI library
 - [Styled Components](https://styled-components.com/) - For styles
+
+### [Published on github pages](https://alexyakimenko.github.io/room-homepage/)
